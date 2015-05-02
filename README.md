@@ -1,3 +1,5 @@
+#SubSatellite 
+
 A small satellite receiver for Subsonic.  
 
 SubSonic jukebox mode allows you to play music direct on the server hardware.  This is great if your server is hooked up to a sound system, but if it isn't then playing your SubSonic music through your sound system means installing a separate server.
