@@ -24,7 +24,7 @@ SubSatellite can be downloaded from http://www.avsubapp.co.uk/subSatellite.html
 
 SubSatellite is packaged as a single JAR file and can be run with the following command
 
-```java -jar subsatellite-0.1.jar
+```java -jar subsatellite-0.1.jar```
 
 By default, SubSatellite runs on port 4141
 
