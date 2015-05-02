@@ -30,13 +30,9 @@ By default, SubSatellite runs on port 4141
 
 ## Configuration
 
-* In your Subsonic server, create a user for SubSatellite to use (see SubSonic setup)
+* In your Subsonic server, create a user for SubSatellite to use
 * Port defaults to 4141 (can be overriden by setting property *jetty.port*)
 * Connection details to connect SubSatellite to SubSonic are provided by client (AVSub) configuration.
-
-## SubSonic Setup
-
-* Create a user in Subsonic for SubSatellite (put these details into config.js in SubSatellite)
 
 ## Client Setup
 
