@@ -36,7 +36,7 @@ By default, SubSatellite runs on port 4141
 
 ## Client Setup
 
-The client passes information to SubSatellite about which Subsonic it should use.  This allows for a very simple setup for SubSatellite.
+The client passes information to SubSatellite about which Subsonic server it should use, along with username and password.  This allows for a very simple setup for SubSatellite.
 
 See http://www.avsubapp.co.uk/subSatellite.html for AVSub specific details.
 
