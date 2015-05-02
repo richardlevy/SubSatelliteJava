@@ -1,20 +1,18 @@
-package subsatellite.rest;
+package com.rml.subsatellite.rest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Map;
 
-import javazoom.jlgui.basicplayer.BasicController;
-import javazoom.jlgui.basicplayer.BasicPlayerEvent;
 import restx.annotations.GET;
 import restx.annotations.RestxResource;
 import restx.factory.Component;
 import restx.security.PermitAll;
-import subsatellite.audio.PlaylistController;
-import subsatellite.audio.SubsonicStreamingURL;
-import subsatellite.response.Playlist;
-import subsatellite.response.Response;
-import subsatellite.response.Status;
+
+import com.rml.subsatellite.audio.PlaylistController;
+import com.rml.subsatellite.audio.SubsonicStreamingURL;
+import com.rml.subsatellite.response.Playlist;
+import com.rml.subsatellite.response.Response;
+import com.rml.subsatellite.response.Status;
 
 @Component
 @RestxResource

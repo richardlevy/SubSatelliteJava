@@ -1,6 +1,6 @@
-package subsatellite.response;
+package com.rml.subsatellite.response;
 
-import subsatellite.audio.PlaylistController;
+import com.rml.subsatellite.audio.PlaylistController;
 
 public class Status {
 

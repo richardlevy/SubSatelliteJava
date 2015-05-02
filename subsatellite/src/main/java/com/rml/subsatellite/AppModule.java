@@ -1,18 +1,26 @@
-package subsatellite;
+package com.rml.subsatellite;
+
+import java.nio.file.Paths;
+
+import javax.inject.Named;
 
 import restx.config.ConfigLoader;
 import restx.config.ConfigSupplier;
+import restx.factory.Module;
 import restx.factory.Provides;
+import restx.security.BCryptCredentialsStrategy;
+import restx.security.BasicPrincipalAuthenticator;
+import restx.security.CredentialsStrategy;
+import restx.security.FileBasedUserRepository;
+import restx.security.SecuritySettings;
+import restx.security.SignatureKey;
+import restx.security.StdBasicPrincipalAuthenticator;
+import restx.security.StdUser;
+import restx.security.StdUserService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableSet;
-import restx.security.*;
-import restx.factory.Module;
-import restx.factory.Provides;
-import javax.inject.Named;
-
-import java.nio.file.Paths;
 
 @Module
 public class AppModule {

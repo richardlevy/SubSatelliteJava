@@ -1,4 +1,4 @@
-package subsatellite.audio;
+package com.rml.subsatellite.audio;
 
 import java.net.MalformedURLException;
 import java.net.URL;

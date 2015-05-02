@@ -1,4 +1,4 @@
-package subsatellite.audio;
+package com.rml.subsatellite.audio;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import javazoom.jlgui.basicplayer.BasicPlayerListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import subsatellite.rest.Control;
+import com.rml.subsatellite.rest.Control;
 
 // add listener for events to this too
 public class PlaylistController implements BasicPlayerListener{
