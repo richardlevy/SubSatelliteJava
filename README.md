@@ -67,7 +67,7 @@ SubSatellite requires:
 * Java 1.8
 * Maven
 
-Included in the source (in the webapp subfolder) is a local Maven repository with most dependancies included.
+Included in the source is a local Maven repository with most dependancies included.
 
 To build, execute the following command from the root:
 
