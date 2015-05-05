@@ -101,8 +101,9 @@ public class Control {
 
 	@GET
 	@Produces("application/xml")
-	@Path("/credentials/{host}/{username}/{password}")
-	public String credentials(@PathParam("host") String host, @PathParam("username") String username, @PathParam("password") String password) {
+	@Path("/credentials/{host}/{username}/{password}/{secure}")
+	public String credentials(@PathParam("host") String host, @PathParam("username") String username, @PathParam("password") String password, @PathParam("secure") boolean secure ) {
+		SubsonicStreamingURL.IS_SECURE=secure;
 		SubsonicStreamingURL.HOST=host;
 		SubsonicStreamingURL.USERNAME=username;
 		SubsonicStreamingURL.PASSWORD=password;

@@ -5,6 +5,7 @@ import java.net.URL;
 
 public class SubsonicStreamingURL {
 
+	public static boolean IS_SECURE=false;
 	public static String HOST="";
 	public static String USERNAME="";
 	public static String PASSWORD="";
@@ -14,7 +15,11 @@ public class SubsonicStreamingURL {
 	public SubsonicStreamingURL(String playlistID) throws MalformedURLException{
 		StringBuilder strb = new StringBuilder();
 		// temporary while we assume http only
-		strb.append("http://");
+		if (IS_SECURE){
+			strb.append("https://");
+		} else {
+			strb.append("http://");			
+		}
 		strb.append(HOST);
 		strb.append("/rest/stream.view?v=1.7.0&c=subSatellite&u=");
 		strb.append(USERNAME);
