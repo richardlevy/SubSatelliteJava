@@ -5,14 +5,16 @@ import java.net.URL;
 
 public class SubsonicStreamingURL {
 
-	public static String HOST="http://192.168.1.78:4040";
-	public static String USERNAME="subsat";
-	public static String PASSWORD="subsat";
+	public static String HOST="";
+	public static String USERNAME="";
+	public static String PASSWORD="";
 	
 	private URL url;
 	
 	public SubsonicStreamingURL(String playlistID) throws MalformedURLException{
 		StringBuilder strb = new StringBuilder();
+		// temporary while we assume http only
+		strb.append("http://");
 		strb.append(HOST);
 		strb.append("/rest/stream.view?v=1.7.0&c=subSatellite&u=");
 		strb.append(USERNAME);

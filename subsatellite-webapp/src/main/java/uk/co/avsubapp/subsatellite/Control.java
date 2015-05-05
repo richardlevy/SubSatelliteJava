@@ -14,8 +14,13 @@ import uk.co.avsubapp.subsatellite.response.Playlist;
 import uk.co.avsubapp.subsatellite.response.Response;
 import uk.co.avsubapp.subsatellite.response.Status;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Path("/rest/satelliteControl.view")
 public class Control {
+
+	private static final Logger LOG = LoggerFactory.getLogger(Control.class);
 
 	public static final String VERSION = "0.1b";
 	public static final String API_VERSION = "0.2";
@@ -101,6 +106,12 @@ public class Control {
 		SubsonicStreamingURL.HOST=host;
 		SubsonicStreamingURL.USERNAME=username;
 		SubsonicStreamingURL.PASSWORD=password;
+
+		LOG.debug("New credentials set:");
+		LOG.debug("Host: " + SubsonicStreamingURL.HOST);
+		LOG.debug("Username: " + SubsonicStreamingURL.USERNAME);
+		LOG.debug("Password: " + SubsonicStreamingURL.PASSWORD);
+
 		return new Response().createOKResponse(new Status(this.player)
 				.toXMLResponse());
 	}
