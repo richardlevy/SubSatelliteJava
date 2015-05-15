@@ -50,7 +50,7 @@ See http://www.avsubapp.co.uk/subSatellite.html for AVSub specific details.
 /rest/satelliteControl.view/get
 /rest/satelliteControl.view/skip/{index}/{offset}
 /rest/satelliteControl.view/setGain/{gain}
-/rest/credentials/{host}/{username}/{password}"
+/rest/credentials/{host}/{username}/{password}/{secure}"
 ```
 
 ## Current Limitations

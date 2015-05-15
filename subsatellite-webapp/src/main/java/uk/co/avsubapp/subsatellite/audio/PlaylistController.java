@@ -28,6 +28,8 @@ public class PlaylistController implements BasicPlayerListener{
 	private ArrayList<String> playlist = new ArrayList<String>();
 	private int currentIndex=0;
 
+	private boolean forceStart=false;
+
 	public static PlaylistController getInstance(){
 		if (INSTANCE==null){
 			INSTANCE=new PlaylistController();
@@ -63,6 +65,10 @@ public class PlaylistController implements BasicPlayerListener{
 	
 	public void setCurrentIndex(int currentIndex){
 		this.currentIndex=currentIndex;
+		// If currently paused, having changed the current index, when we start ensure
+		// that it doesnt resume from what we were previously playing, but starts from
+		// this new index instead
+		forceStart=true;
 	}
 
 	public boolean isPlaying(){
@@ -85,7 +91,7 @@ public class PlaylistController implements BasicPlayerListener{
 	/** Read sampled audio data from the specified URL and play it */
 	public void startPlaying() {
 		try {
-			if (this.isPaused()){
+			if (this.isPaused() && !forceStart){
 				this.player.resume();
 			} else {
 				SubsonicStreamingURL url = new SubsonicStreamingURL(this.playlist.get(this.currentIndex));
@@ -93,6 +99,7 @@ public class PlaylistController implements BasicPlayerListener{
 				this.player.play();
 				LOG.info("Playing stream - " + url.getURL() );
 			}
+			forceStart=false;
 		} catch (IOException | BasicPlayerException e) {
 			e.printStackTrace();
 		}
