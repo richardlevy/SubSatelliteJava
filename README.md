@@ -53,6 +53,20 @@ See http://www.avsubapp.co.uk/subSatellite.html for AVSub specific details.
 /rest/credentials/{host}/{username}/{password}/{secure}"
 ```
 
+To test if your SubSatellite instance is ready to go, you can test it at this URL from a browser:
+
+```
+http://<ip:port>/rest/satelliteControl.view/status
+```
+
+You should receive a response that looks like this
+
+```
+<subsatellite-response xmlns="http://www.avsubapp.co.uk/subsatellite/restapi" status="ok" version="0.2">
+  <satelliteStatus currentIndex="0" playing="false" gain="0.0" position="0"/>
+</subsatellite-response>
+```
+
 ## Current Limitations
 
 This project is a minimum viable prototype.  It has the following limitations:
